@@ -1,6 +1,7 @@
 package com.pixelart.week4daily2.remotes
 
 import com.pixelart.week4daily2.model.WeatherData
+import com.pixelart.week4daily2.model.WeatherList
 import io.reactivex.Single
 import okhttp3.ResponseBody
 import retrofit2.Call

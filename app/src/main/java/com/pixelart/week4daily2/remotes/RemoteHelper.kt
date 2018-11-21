@@ -4,6 +4,7 @@ import com.pixelart.week4daily2.APPID
 import com.pixelart.week4daily2.BASE_WEATHER_URL
 import com.pixelart.week4daily2.ZIP
 import com.pixelart.week4daily2.model.WeatherData
+import com.pixelart.week4daily2.model.WeatherList
 import io.reactivex.Single
 import retrofit2.Call
 import okhttp3.OkHttpClient

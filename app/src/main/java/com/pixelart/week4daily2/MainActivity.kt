@@ -27,12 +27,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val listFragement = ListFragment.newInstance()
-            supportFragmentManager.beginTransaction().add(R.id.frag1, listFragement, "listFragment").commit()
+            supportFragmentManager.beginTransaction().add(R.id.flFragment, listFragement, "listFragment").commit()
 
         val detailFragment = DetailFragment.newInstance()
-        supportFragmentManager.beginTransaction().add(R.id.frag2, detailFragment, "detailFragment").commit()
+        //supportFragmentManager.beginTransaction().add(R.id.frag2, detailFragment, "detailFragment").commit()
 
-        initWeather()
+       //initWeather()
     }
 
     private fun initWeather()
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             })
 
-        /* RemoteHelper.getWeatherData().enqueue(object : retrofit2.Callback<ResponseBody>{
+         /*RemoteHelper.getWeatherData().enqueue(object : retrofit2.Callback<ResponseBody>{
                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                        t.printStackTrace()
                    }
@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
                        val gson = Gson( )
                        val json = response.body()?.string()
                        val data = gson.fromJson(json, WeatherData::class.java)
-                       Log.d(TAG, "City Name: ${data.city.name}")
+                       Log.d(TAG, "City Name: ${data.city.name} Data Size: ${data.list[0].weather.size}")
+
                    }
 
                })*/
